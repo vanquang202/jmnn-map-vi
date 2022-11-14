@@ -19,7 +19,8 @@ class MapViCommand extends Command
     public function handle()
     {
 
-        $address = (array) json_decode((file_get_contents(__DIR__.'/data.json')),true);
+        $address = $this->__getData();
+
         $result = array_filter($address,function ($data) {
             $name = $this->__convertString($data['name']);
             return (bool) $this->__macth($this->option('search'),$name);
@@ -39,6 +40,11 @@ class MapViCommand extends Command
     private function __fail() : int
     {
         return Command::FAILURE;
+    }
+
+    private function __getData()
+    {
+        return (array) json_decode((file_get_contents(__DIR__.'/data.json')),true);
     }
 
     private function __convertString($data)
