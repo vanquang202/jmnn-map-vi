@@ -1,0 +1,24 @@
+{
+    "name": "jmnn/map-vi",
+    "description": "Package map vietnam",
+    "type": "laravel",
+    "autoload": {
+        "psr-4": {
+            "Jmnn\\MapVi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "jmnn",
+            "email": "kopopi593@gmail.com"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jmnn\\MapVi\\MapViServiceProvider"
+            ]
+        }
+    }
+}
