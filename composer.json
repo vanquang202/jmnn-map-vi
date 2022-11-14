@@ -13,7 +13,9 @@
             "email": "kopopi593@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "jmnn/map" : "*"
+    },
     "extra": {
         "laravel": {
             "providers": [
